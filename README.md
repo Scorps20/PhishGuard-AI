@@ -10,6 +10,15 @@ checks for suspicious phrases and risky-looking links.
 > PhishGuard AI is an educational phishing-detection tool. Predictions are automated estimates and
 > should not be treated as proof that a message is safe or malicious.
 
+**Datasets used** (not included in this repository; download them yourself):
+- **SMS:** [SMS Phishing Dataset for Machine Learning and Pattern Recognition](https://data.mendeley.com/datasets/f45bkkt8pr/1)
+  (Mendeley Data, CC BY 4.0)
+- **Email:** [Phishing Email Dataset](https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset)
+  (Kaggle, CC BY-SA 4.0), only `Nazario.csv` and `SpamAssasin.csv`
+
+See [section 8](#8-datasets-and-licensing) for how labels were mapped and the known limitations,
+and [section 12](#12-dataset-placement) for download and placement steps.
+
 ---
 
 ## 1. Project overview
