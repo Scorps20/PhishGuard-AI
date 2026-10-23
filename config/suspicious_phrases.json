@@ -1,0 +1,54 @@
+{
+  "_comment": "Phrases often seen in phishing. Matching ignores letter case and extra spaces. Legitimate messages can contain these too, so a match is only an indicator, never proof. Edit freely: add a phrase to a category, or add a new category with a 'name', 'description' and 'phrases'.",
+  "categories": [
+    {
+      "name": "urgency",
+      "description": "urgency or pressure to act quickly",
+      "phrases": [
+        "immediate action required", "act now", "urgent action", "within 24 hours",
+        "expires today", "final notice", "last warning", "respond immediately"
+      ]
+    },
+    {
+      "name": "account_threat",
+      "description": "threats to block or suspend an account",
+      "phrases": [
+        "account suspended", "account has been suspended", "your account will be blocked",
+        "account will be closed", "account has been locked", "service will be terminated"
+      ]
+    },
+    {
+      "name": "credentials",
+      "description": "requests to verify an account or share login details",
+      "phrases": [
+        "verify your account", "confirm your password", "update your kyc", "confirm your identity",
+        "reset your password", "unusual login activity", "unusual activity", "share your otp",
+        "enter your pin", "update your details", "verify your identity"
+      ]
+    },
+    {
+      "name": "rewards",
+      "description": "prizes, rewards or offers that seem too good to be true",
+      "phrases": [
+        "claim your reward", "claim your prize", "you have won", "you've won",
+        "congratulations you", "you have been selected", "cash prize", "free gift"
+      ]
+    },
+    {
+      "name": "payment",
+      "description": "requests for payment or banking details",
+      "phrases": [
+        "payment required", "payment failed", "outstanding balance", "update your payment",
+        "bank details", "pending refund", "processing fee"
+      ]
+    },
+    {
+      "name": "call_to_action",
+      "description": "pressure to click a link or call a number",
+      "phrases": [
+        "click here", "click the link", "click below", "log in here", "login here",
+        "call now", "open the attachment"
+      ]
+    }
+  ]
+}

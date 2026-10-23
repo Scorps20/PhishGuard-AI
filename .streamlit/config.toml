@@ -1,0 +1,16 @@
+# Streamlit settings for PhishGuard AI
+
+[browser]
+# Do not send anonymous usage statistics to Streamlit
+gatherUsageStats = false
+
+[server]
+# Only reachable from this computer
+address = "localhost"
+
+[theme]
+base = "light"
+primaryColor = "#1E4FA3"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F2F5FA"
+textColor = "#0F1E3D"

@@ -1,0 +1,10 @@
+# Exact versions verified with Python 3.12 on Windows (2026-10-23).
+# Keep scikit-learn the same when training and running the app:
+# a model saved with one version may not load in another.
+numpy==2.5.4          # numerical arrays (used directly in training/evaluation)
+pandas==3.1.0         # loading and cleaning the CSV datasets
+scikit-learn==1.9.1   # TF-IDF, Logistic Regression, metrics
+joblib==1.6.0         # saving/loading the trained model
+matplotlib==3.11.2    # confusion-matrix image in evaluate_model.py
+streamlit==1.66.1     # web interface
+pytest==9.1.1         # automated tests

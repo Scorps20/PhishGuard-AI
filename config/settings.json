@@ -1,0 +1,36 @@
+{
+  "_comment": "Settings for training and risk assessment. See README.md for what each value means.",
+  "model": {
+    "_comment": "classification_threshold is read by train_model.py and saved into models/thresholds.json. The app and evaluate_model.py use the saved copy, so after changing it here you must re-run: python train_model.py, then python evaluate_model.py.",
+    "random_seed": 42,
+    "validation_size": 0.15,
+    "test_size": 0.15,
+    "classification_threshold": 0.5
+  },
+  "risk": {
+    "_comment": "train_model.py picks the Medium/High score thresholds on the VALIDATION set using these targets and saves them to models/thresholds.json. The default_* values are only used if that file is missing.",
+    "medium_recall_target": 0.99,
+    "high_precision_target": 0.98,
+    "default_medium_threshold": 0.3,
+    "default_high_threshold": 0.8,
+    "_indicator_comment": "Extra indicators can raise the risk by ONE level at most: Low -> Medium always, Medium -> High only if the model itself predicted phishing. They never lower the risk.",
+    "min_phrase_matches_to_raise": 2,
+    "_borderline_comment": "Wording only (does not change any risk level): a LEGITIMATE prediction whose score is within this distance below the classification threshold is described as 'borderline'.",
+    "borderline_margin": 0.05,
+    "url_warning_raises_risk": true
+  },
+  "url": {
+    "_comment": "Structural URL checks only. Links are never opened or sent anywhere.",
+    "max_url_length": 75,
+    "max_subdomains": 3,
+    "max_urls_to_analyse": 20,
+    "shorteners": [
+      "bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly",
+      "rebrand.ly", "cutt.ly", "shorturl.at", "tiny.cc", "rb.gy", "t.ly", "bl.ink"
+    ],
+    "suspicious_hostname_words": [
+      "login", "signin", "verify", "verification", "secure", "account",
+      "update", "banking", "wallet", "kyc", "unlock", "confirm"
+    ]
+  }
+}

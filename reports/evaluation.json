@@ -1,0 +1,473 @@
+{
+  "thresholds": {
+    "classification_threshold": 0.5,
+    "medium_threshold": 0.2886,
+    "high_threshold": 0.6006,
+    "chosen_on": "validation set",
+    "medium_recall_target": 0.99,
+    "high_precision_target": 0.98,
+    "trained_at": "2026-10-23T16:04:28+00:00",
+    "scikit_learn_version": "1.9.1",
+    "random_seed": 42,
+    "train_size": 7583,
+    "vocabulary_size": 50000
+  },
+  "splits": {
+    "train": {
+      "overall": {
+        "messages": 7583,
+        "phishing_messages": 1353,
+        "accuracy": 0.9964,
+        "precision": 0.9811,
+        "recall": 0.9993,
+        "f1": 0.9901,
+        "confusion_matrix": {
+          "true_negatives": 6204,
+          "false_positives": 26,
+          "false_negatives": 1,
+          "true_positives": 1352
+        },
+        "classification_report": {
+          "legitimate": {
+            "precision": 0.9998388396454472,
+            "recall": 0.9958266452648475,
+            "f1-score": 0.9978287092882991,
+            "support": 6230.0
+          },
+          "phishing": {
+            "precision": 0.9811320754716981,
+            "recall": 0.9992609016999261,
+            "f1-score": 0.9901135115342365,
+            "support": 1353.0
+          },
+          "accuracy": 0.9964394039298431,
+          "macro avg": {
+            "precision": 0.9904854575585726,
+            "recall": 0.9975437734823869,
+            "f1-score": 0.9939711104112678,
+            "support": 7583.0
+          },
+          "weighted avg": {
+            "precision": 0.9965010772918824,
+            "recall": 0.9964394039298431,
+            "f1-score": 0.9964521218478077,
+            "support": 7583.0
+          }
+        }
+      },
+      "email": {
+        "messages": 3918,
+        "phishing_messages": 1066,
+        "accuracy": 0.9974,
+        "precision": 0.9907,
+        "recall": 1.0,
+        "f1": 0.9953,
+        "confusion_matrix": {
+          "true_negatives": 2842,
+          "false_positives": 10,
+          "false_negatives": 0,
+          "true_positives": 1066
+        },
+        "classification_report": {
+          "legitimate": {
+            "precision": 1.0,
+            "recall": 0.9964936886395512,
+            "f1-score": 0.9982437653670531,
+            "support": 2852.0
+          },
+          "phishing": {
+            "precision": 0.9907063197026023,
+            "recall": 1.0,
+            "f1-score": 0.9953314659197012,
+            "support": 1066.0
+          },
+          "accuracy": 0.9974476773864216,
+          "macro avg": {
+            "precision": 0.9953531598513011,
+            "recall": 0.9982468443197756,
+            "f1-score": 0.9967876156433771,
+            "support": 3918.0
+          },
+          "weighted avg": {
+            "precision": 0.997471397856808,
+            "recall": 0.9974476773864216,
+            "f1-score": 0.9974513939502903,
+            "support": 3918.0
+          }
+        }
+      },
+      "sms": {
+        "messages": 3665,
+        "phishing_messages": 287,
+        "accuracy": 0.9954,
+        "precision": 0.947,
+        "recall": 0.9965,
+        "f1": 0.9711,
+        "confusion_matrix": {
+          "true_negatives": 3362,
+          "false_positives": 16,
+          "false_negatives": 1,
+          "true_positives": 286
+        },
+        "classification_report": {
+          "legitimate": {
+            "precision": 0.999702646446625,
+            "recall": 0.9952634695085849,
+            "f1-score": 0.9974781189734461,
+            "support": 3378.0
+          },
+          "phishing": {
+            "precision": 0.9470198675496688,
+            "recall": 0.9965156794425087,
+            "f1-score": 0.9711375212224108,
+            "support": 287.0
+          },
+          "accuracy": 0.9953615279672579,
+          "macro avg": {
+            "precision": 0.9733612569981469,
+            "recall": 0.9958895744755468,
+            "f1-score": 0.9843078200979285,
+            "support": 3665.0
+          },
+          "weighted avg": {
+            "precision": 0.995577146434776,
+            "recall": 0.9953615279672579,
+            "f1-score": 0.99541543096402,
+            "support": 3665.0
+          }
+        }
+      }
+    },
+    "validation": {
+      "overall": {
+        "messages": 1626,
+        "phishing_messages": 290,
+        "accuracy": 0.9865,
+        "precision": 0.9589,
+        "recall": 0.9655,
+        "f1": 0.9622,
+        "confusion_matrix": {
+          "true_negatives": 1324,
+          "false_positives": 12,
+          "false_negatives": 10,
+          "true_positives": 280
+        },
+        "classification_report": {
+          "legitimate": {
+            "precision": 0.992503748125937,
+            "recall": 0.9910179640718563,
+            "f1-score": 0.9917602996254682,
+            "support": 1336.0
+          },
+          "phishing": {
+            "precision": 0.958904109589041,
+            "recall": 0.9655172413793104,
+            "f1-score": 0.9621993127147767,
+            "support": 290.0
+          },
+          "accuracy": 0.986469864698647,
+          "macro avg": {
+            "precision": 0.975703928857489,
+            "recall": 0.9782676027255833,
+            "f1-score": 0.9769798061701225,
+            "support": 1626.0
+          },
+          "weighted avg": {
+            "precision": 0.986511192667327,
+            "recall": 0.986469864698647,
+            "f1-score": 0.9864880448873989,
+            "support": 1626.0
+          }
+        }
+      },
+      "email": {
+        "messages": 840,
+        "phishing_messages": 229,
+        "accuracy": 0.9833,
+        "precision": 0.9736,
+        "recall": 0.9651,
+        "f1": 0.9693,
+        "confusion_matrix": {
+          "true_negatives": 605,
+          "false_positives": 6,
+          "false_negatives": 8,
+          "true_positives": 221
+        },
+        "classification_report": {
+          "legitimate": {
+            "precision": 0.9869494290375204,
+            "recall": 0.9901800327332242,
+            "f1-score": 0.988562091503268,
+            "support": 611.0
+          },
+          "phishing": {
+            "precision": 0.973568281938326,
+            "recall": 0.9650655021834061,
+            "f1-score": 0.9692982456140351,
+            "support": 229.0
+          },
+          "accuracy": 0.9833333333333333,
+          "macro avg": {
+            "precision": 0.9802588554879232,
+            "recall": 0.9776227674583151,
+            "f1-score": 0.9789301685586516,
+            "support": 840.0
+          },
+          "weighted avg": {
+            "precision": 0.9833014734592878,
+            "recall": 0.9833333333333333,
+            "f1-score": 0.9833104001834653,
+            "support": 840.0
+          }
+        }
+      },
+      "sms": {
+        "messages": 786,
+        "phishing_messages": 61,
+        "accuracy": 0.9898,
+        "precision": 0.9077,
+        "recall": 0.9672,
+        "f1": 0.9365,
+        "confusion_matrix": {
+          "true_negatives": 719,
+          "false_positives": 6,
+          "false_negatives": 2,
+          "true_positives": 59
+        },
+        "classification_report": {
+          "legitimate": {
+            "precision": 0.9972260748959778,
+            "recall": 0.9917241379310345,
+            "f1-score": 0.9944674965421854,
+            "support": 725.0
+          },
+          "phishing": {
+            "precision": 0.9076923076923077,
+            "recall": 0.9672131147540983,
+            "f1-score": 0.9365079365079365,
+            "support": 61.0
+          },
+          "accuracy": 0.989821882951654,
+          "macro avg": {
+            "precision": 0.9524591912941427,
+            "recall": 0.9794686263425665,
+            "f1-score": 0.9654877165250609,
+            "support": 786.0
+          },
+          "weighted avg": {
+            "precision": 0.9902775255328431,
+            "recall": 0.989821882951654,
+            "f1-score": 0.9899693627481787,
+            "support": 786.0
+          }
+        }
+      }
+    },
+    "test": {
+      "overall": {
+        "messages": 1626,
+        "phishing_messages": 290,
+        "accuracy": 0.9877,
+        "precision": 0.9655,
+        "recall": 0.9655,
+        "f1": 0.9655,
+        "confusion_matrix": {
+          "true_negatives": 1326,
+          "false_positives": 10,
+          "false_negatives": 10,
+          "true_positives": 280
+        },
+        "classification_report": {
+          "legitimate": {
+            "precision": 0.9925149700598802,
+            "recall": 0.9925149700598802,
+            "f1-score": 0.9925149700598802,
+            "support": 1336.0
+          },
+          "phishing": {
+            "precision": 0.9655172413793104,
+            "recall": 0.9655172413793104,
+            "f1-score": 0.9655172413793104,
+            "support": 290.0
+          },
+          "accuracy": 0.9876998769987699,
+          "macro avg": {
+            "precision": 0.9790161057195953,
+            "recall": 0.9790161057195953,
+            "f1-score": 0.9790161057195953,
+            "support": 1626.0
+          },
+          "weighted avg": {
+            "precision": 0.9876998769987699,
+            "recall": 0.9876998769987699,
+            "f1-score": 0.9876998769987699,
+            "support": 1626.0
+          }
+        }
+      },
+      "email": {
+        "messages": 841,
+        "phishing_messages": 229,
+        "accuracy": 0.9929,
+        "precision": 0.9912,
+        "recall": 0.9825,
+        "f1": 0.9868,
+        "confusion_matrix": {
+          "true_negatives": 610,
+          "false_positives": 2,
+          "false_negatives": 4,
+          "true_positives": 225
+        },
+        "classification_report": {
+          "legitimate": {
+            "precision": 0.993485342019544,
+            "recall": 0.9967320261437909,
+            "f1-score": 0.9951060358890701,
+            "support": 612.0
+          },
+          "phishing": {
+            "precision": 0.9911894273127754,
+            "recall": 0.982532751091703,
+            "f1-score": 0.9868421052631579,
+            "support": 229.0
+          },
+          "accuracy": 0.9928656361474435,
+          "macro avg": {
+            "precision": 0.9923373846661596,
+            "recall": 0.9896323886177469,
+            "f1-score": 0.990974070576114,
+            "support": 841.0
+          },
+          "weighted avg": {
+            "precision": 0.9928601761838126,
+            "recall": 0.9928656361474435,
+            "f1-score": 0.9928558098327872,
+            "support": 841.0
+          }
+        }
+      },
+      "sms": {
+        "messages": 785,
+        "phishing_messages": 61,
+        "accuracy": 0.9822,
+        "precision": 0.873,
+        "recall": 0.9016,
+        "f1": 0.8871,
+        "confusion_matrix": {
+          "true_negatives": 716,
+          "false_positives": 8,
+          "false_negatives": 6,
+          "true_positives": 55
+        },
+        "classification_report": {
+          "legitimate": {
+            "precision": 0.9916897506925207,
+            "recall": 0.988950276243094,
+            "f1-score": 0.9903181189488244,
+            "support": 724.0
+          },
+          "phishing": {
+            "precision": 0.873015873015873,
+            "recall": 0.9016393442622951,
+            "f1-score": 0.8870967741935484,
+            "support": 61.0
+          },
+          "accuracy": 0.9821656050955414,
+          "macro avg": {
+            "precision": 0.9323528118541968,
+            "recall": 0.9452948102526946,
+            "f1-score": 0.9387074465711864,
+            "support": 785.0
+          },
+          "weighted avg": {
+            "precision": 0.982467958924017,
+            "recall": 0.9821656050955414,
+            "f1-score": 0.9822970972544653,
+            "support": 785.0
+          }
+        }
+      }
+    }
+  },
+  "validation_calibration_check": {
+    "brier_score": 0.0185,
+    "bins": [
+      {
+        "score_range": "0.0-0.2",
+        "messages": 1249,
+        "average_score": 0.072,
+        "actual_phishing_rate": 0.002
+      },
+      {
+        "score_range": "0.2-0.4",
+        "messages": 73,
+        "average_score": 0.271,
+        "actual_phishing_rate": 0.055
+      },
+      {
+        "score_range": "0.4-0.6",
+        "messages": 25,
+        "average_score": 0.496,
+        "actual_phishing_rate": 0.4
+      },
+      {
+        "score_range": "0.6-0.8",
+        "messages": 35,
+        "average_score": 0.718,
+        "actual_phishing_rate": 0.914
+      },
+      {
+        "score_range": "0.8-1.0",
+        "messages": 244,
+        "average_score": 0.942,
+        "actual_phishing_rate": 0.992
+      }
+    ]
+  },
+  "top_terms": {
+    "towards_phishing": [
+      "your",
+      "account",
+      "call",
+      "please",
+      "email",
+      "your account",
+      "claim",
+      "to",
+      "update",
+      "service",
+      "contact",
+      "customer",
+      "below",
+      "mobile",
+      "our",
+      "you have",
+      "utf",
+      "utf 8",
+      "dear",
+      "prize"
+    ],
+    "towards_legitimate": [
+      "i",
+      "me",
+      "my",
+      "that",
+      "but",
+      "it",
+      "ok",
+      "so",
+      "http",
+      "http www",
+      "how",
+      "what",
+      "got",
+      "come",
+      "u",
+      "he",
+      "i m",
+      "then",
+      "pls",
+      "going"
+    ]
+  }
+}

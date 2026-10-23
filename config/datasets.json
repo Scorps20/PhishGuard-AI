@@ -1,0 +1,56 @@
+{
+  "_comment": "Each entry describes one raw dataset. 'path' is relative to data/raw/. Label values are matched case-insensitively. Any label NOT listed in label_mapping is dropped (never assumed legitimate). Map non-phishing spam to 'spam': it is kept in all_labelled.csv but excluded from training. Set 'enabled' to false to skip a dataset. 'remove_patterns' (optional) is a list of regular expressions removed from that dataset's text before training, used to strip collection artifacts such as the corpus owner's email address or the collection year.",
+  "datasets": [
+    {
+      "name": "mendeley_sms_phishing",
+      "enabled": true,
+      "channel": "sms",
+      "path": "sms_mendeley/Dataset_5971.csv",
+      "encoding": "utf-8",
+      "text_column": "TEXT",
+      "subject_column": null,
+      "label_column": "LABEL",
+      "label_mapping": {
+        "ham": "legitimate",
+        "smishing": "phishing",
+        "spam": "spam"
+      }
+    },
+    {
+      "name": "nazario_phishing_email",
+      "enabled": true,
+      "channel": "email",
+      "path": "email/Nazario.csv",
+      "encoding": "utf-8",
+      "text_column": "body",
+      "subject_column": "subject",
+      "label_column": "label",
+      "label_mapping": {
+        "1": "phishing"
+      },
+      "remove_patterns": [
+        "jose\\s*@\\s*monkey\\.org",
+        "monkey\\.org",
+        "\\bjose\\b",
+        "\\b(?:199\\d|200\\d|201\\d|202\\d)\\b"
+      ]
+    },
+    {
+      "name": "spamassassin_email",
+      "enabled": true,
+      "channel": "email",
+      "path": "email/SpamAssasin.csv",
+      "encoding": "utf-8",
+      "text_column": "body",
+      "subject_column": "subject",
+      "label_column": "label",
+      "label_mapping": {
+        "0": "legitimate",
+        "1": "spam"
+      },
+      "remove_patterns": [
+        "\\b(?:199\\d|200\\d|201\\d|202\\d)\\b"
+      ]
+    }
+  ]
+}
