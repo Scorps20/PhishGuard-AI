@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from src.phishing_detector import PhishingDetector, Prediction
 from src.preprocessing import combine_email_text
 from src.risk_assessment import RiskAssessment, assess_risk
-from src.suspicious_phrases import PhraseMatch, find_suspicious_phrases, highlight_phrases
+from src.suspicious_phrases import PhraseMatch, find_suspicious_phrases, highlight_phrases, split_by_phrases
 from src.url_analyzer import UrlReport, analyse_message_urls
 
 CHANNEL_EMAIL = "email"
@@ -20,6 +20,7 @@ class AnalysisResult:
     phrase_matches: list[PhraseMatch]
     url_reports: list[UrlReport]
     highlighted_html: str           # original message, HTML-escaped, phrases in <mark>
+    segments: list[dict]            # original message as plain-text pieces, suspicious ones flagged
 
 
 def analyse_message(detector: PhishingDetector, channel: str, message: str,
@@ -51,4 +52,5 @@ def analyse_message(detector: PhishingDetector, channel: str, message: str,
         phrase_matches=phrase_matches,
         url_reports=url_reports,
         highlighted_html=highlight_phrases(original, phrase_matches),
+        segments=split_by_phrases(original, phrase_matches),
     )

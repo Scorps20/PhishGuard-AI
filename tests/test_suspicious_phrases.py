@@ -66,3 +66,13 @@ def test_invalid_config_is_rejected(tmp_path):
     path.write_text(json.dumps({"categories": [{"name": "x"}]}))
     with pytest.raises(ValueError):
         load_phrase_categories(path)
+
+
+def test_split_by_phrases_rebuilds_the_text_and_flags_matches():
+    from src.suspicious_phrases import split_by_phrases
+    text = "Hi, click here or Click Here."
+    pieces = split_by_phrases(text, find_suspicious_phrases(text, CATEGORIES))
+    assert "".join(p["text"] for p in pieces) == text
+    assert [p["text"] for p in pieces if p["flagged"]] == ["click here", "Click Here"]
+    assert split_by_phrases("", []) == [] and split_by_phrases(None, []) == []
+    assert split_by_phrases("no matches", []) == [{"text": "no matches", "flagged": False}]

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PhishGuard AI checks an email or SMS for phishing with a trained NLP model." />
+    <link rel="icon" type="image/svg+xml" href="/mark.svg" />
+    <title>PhishGuard AI</title>
+    <script>
+      // Apply the saved or system theme before the page draws (no flash of the wrong theme)
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem("pg-theme"); } catch (e) {}
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>PhishGuard AI needs JavaScript to run in the browser.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

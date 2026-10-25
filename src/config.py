@@ -18,6 +18,10 @@ REPORTS_DIR = PROJECT_ROOT / "reports"
 DATASETS_CONFIG_PATH = CONFIG_DIR / "datasets.json"
 SETTINGS_PATH = CONFIG_DIR / "settings.json"
 PHRASES_PATH = CONFIG_DIR / "suspicious_phrases.json"
+EXAMPLES_PATH = CONFIG_DIR / "examples.json"
+
+# The React interface, built by "npm run build" in web/
+WEB_DIST_DIR = PROJECT_ROOT / "web" / "dist"
 
 # Output of prepare_data.py
 ALL_LABELLED_PATH = DATA_PROCESSED_DIR / "all_labelled.csv"   # phishing / legitimate / spam

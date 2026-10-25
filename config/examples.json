@@ -1,0 +1,17 @@
+{
+  "_comment": "Hand-written demo messages shown in the app (not training data). Also listed in README section 18.",
+  "examples": [
+    {"key": "suspended-email", "title": "Account suspended notice", "channel": "email",
+     "subject": "Action required: account suspended",
+     "body": "Your account has been suspended due to unusual login activity. Click here to verify your account within 24 hours: http://secure-login.example-bank.co/verify"},
+    {"key": "slides-email", "title": "Colleague sharing slides", "channel": "email",
+     "subject": "Slides for Thursday",
+     "body": "Hi team, the slides for Thursday's review are on the shared drive. Let me know if anything is missing. Thanks, Priya"},
+    {"key": "kyc-sms", "title": "KYC update with a short link", "channel": "sms",
+     "body": "Dear customer, your KYC is pending. Update your KYC now at bit.ly/kyc-upd8 or your account will be blocked."},
+    {"key": "late-sms", "title": "Running late", "channel": "sms",
+     "body": "Running 10 mins late, order me a coffee pls"},
+    {"key": "otp-sms", "title": "Genuine bank OTP", "channel": "sms",
+     "body": "Your OTP for login is 482913. Do not share it with anyone."}
+  ]
+}

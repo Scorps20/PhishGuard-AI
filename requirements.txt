@@ -1,4 +1,4 @@
-# Exact versions verified with Python 3.12 on Windows (2026-10-23).
+# Exact versions verified with Python 3.12 on Windows (2026-10-25).
 # Keep scikit-learn the same when training and running the app:
 # a model saved with one version may not load in another.
 numpy==2.5.4          # numerical arrays (used directly in training/evaluation)
@@ -6,5 +6,8 @@ pandas==3.1.0         # loading and cleaning the CSV datasets
 scikit-learn==1.9.1   # TF-IDF, Logistic Regression, metrics
 joblib==1.6.0         # saving/loading the trained model
 matplotlib==3.11.2    # confusion-matrix image in evaluate_model.py
-streamlit==1.66.1     # web interface
+fastapi==0.162.0      # web API that serves the interface and the analysis endpoint
+uvicorn==0.54.0       # runs the FastAPI server
 pytest==9.1.1         # automated tests
+httpx==0.28.1         # used by FastAPI's test client in the tests
+# The interface itself (web/) is built with Node.js; see web/package.json and README section 10.

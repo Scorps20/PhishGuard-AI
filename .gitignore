@@ -21,3 +21,10 @@ models/*
 .idea/
 Thumbs.db
 .DS_Store
+
+# Design-check working files (screenshots, reports)
+.taste-skill/
+
+# Web interface: installed packages and build output (recreate with npm install / npm run build)
+web/node_modules/
+web/dist/
