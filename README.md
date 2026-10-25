@@ -301,6 +301,12 @@ thresholds on the **validation set**, and saves:
 
 You only need to train once. The app loads the saved model.
 
+**The trained model is included in this repository** (`models/phishguard_pipeline.joblib` and
+`models/thresholds.json`), so you can run the app without downloading the datasets or training.
+It was trained on the datasets in section 8 (CC BY 4.0 and CC BY-SA 4.0; see their pages for
+attribution). Retrain only if you change the data, the preprocessing or the settings. The saved
+model needs the scikit-learn version in `requirements.txt`.
+
 ## 15. Evaluate the model
 
 ```
@@ -364,6 +370,23 @@ If the interface has not been built yet, the page tells you to run `npm run buil
 **Developing the interface** (optional, live reload): run the server above in one terminal, and in
 a second terminal run `cd web` then `npm run dev`, and open http://localhost:5173. The development
 page forwards its API calls to the server on port 8000.
+
+### Quick start with the included model (Windows)
+
+No datasets or training needed:
+
+```
+python -m venv .venv
+.venv\Scripts\activate
+python -m pip install -r requirements.txt
+cd web
+npm install
+npm run build
+cd ..
+python -m uvicorn api:app --port 8000
+```
+
+Then open http://localhost:8000.
 
 ### Full command sequence (Windows)
 

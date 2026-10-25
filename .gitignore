@@ -12,9 +12,11 @@ data/raw/*
 data/processed/*
 !data/processed/.gitkeep
 
-# Trained model files: recreate with "python train_model.py"
+# Trained model: the pipeline and thresholds are committed so the app runs without retraining
 models/*
 !models/.gitkeep
+!models/phishguard_pipeline.joblib
+!models/thresholds.json
 
 # Editors / OS
 .vscode/

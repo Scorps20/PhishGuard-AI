@@ -1,0 +1,13 @@
+{
+  "classification_threshold": 0.5,
+  "medium_threshold": 0.2886,
+  "high_threshold": 0.6006,
+  "chosen_on": "validation set",
+  "medium_recall_target": 0.99,
+  "high_precision_target": 0.98,
+  "trained_at": "2026-10-23T16:04:28+00:00",
+  "scikit_learn_version": "1.9.1",
+  "random_seed": 42,
+  "train_size": 7583,
+  "vocabulary_size": 50000
+}
